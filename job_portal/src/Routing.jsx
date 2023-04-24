@@ -5,6 +5,9 @@ import JobNotFound from "./pages/JobNotFound";
 import JobDetails from "./Components/JobDetails";
 import NewJob from './pages/NewJob';
 import VacanciesPage from './pages/VacanciesPage';
+import Contact from './pages/Contact'
+import Footer from './pages/Footer'
+
 
 const Routing = () => {
     return(
@@ -16,6 +19,8 @@ const Routing = () => {
                 <Route path="/job/:id" exact element={<JobDetails />} />
                 <Route path="/404" exact element={<JobNotFound />} />
                 <Route path="*" element={<Navigate to="/404" />} />
+                <Route path="/Contact" exact element={<Contact />} />
+                <Route path="/Contact" exact element={<Footer />} />
             </Routes>
         </BrowserRouter>
     )

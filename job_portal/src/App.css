@@ -5,17 +5,70 @@
   text-align: center;
 }
 
+body {
+  
+}
+
 .logo {
   height: 4em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  display: flex;
+  float: left;
+  width: 50px
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+.nav-logo {
+  height: 10em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  display: flex;
+  float: left;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  justify-content: space-between;  
+  top: 0;
+}
+
+header nav {
+  background-color: lightgray;
+  margin: 0 0 0 0;
+  padding: 20px;
+  overflow: hidden;
+  position: sticky;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  float: right;
+  font-size: 20px;
+}
+
+.header-job-portal {
+  font-size: 20px;
+}
+
+.menu-item a {
+  list-style: none;
+  color: black;
+}
+
+.menu-item :hover {
+  color: gray;
 }
 
 @keyframes logo-spin {
@@ -40,3 +93,10 @@
 .read-the-docs {
   color: #888;
 }
+
+form .row {
+  display: inline-block;
+}
+
+
+

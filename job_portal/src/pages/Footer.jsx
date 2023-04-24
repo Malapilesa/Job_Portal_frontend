@@ -1,7 +1,7 @@
 import React from "react";
 import NewJobForm from "../Components/NewJobForm";
 import Header from "../Components/Header";
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer";
 
 const NewJob = () =>{
   

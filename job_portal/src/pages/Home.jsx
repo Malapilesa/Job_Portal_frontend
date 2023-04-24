@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 import ViewVacancies from '../Components/ViewVacancies';
 import AddNewJob from '../Components/AddNewJob';
 import Header from '../Components/Header';
+import Footer from "../Components/Footer"
 
 const Home = () => {
 	return (
 		<>
-			<Header />
-			<h1>Job Portal</h1>
+			<Header />			
 			<Link to={'/vacancies'}>
             	<ViewVacancies />
 			</Link>
 			<Link to={'/addnew'}>
 				<AddNewJob />  
 			</Link>
-               
+            <Footer />  
 		</>
 	);
 };

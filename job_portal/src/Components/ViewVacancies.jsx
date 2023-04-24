@@ -3,10 +3,10 @@ import React from 'react';
 const ViewVacancies = () => {
 	return (
 		<>
-            <button>
+            <button  type="button" class="btn btn-light mr-3">
                 Available Vacancies
             </button>
-      
+
 		</>
 	);
 };

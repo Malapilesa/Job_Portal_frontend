@@ -1,19 +1,20 @@
 import React from "react";
-import Vacancies from "../Components/Vacancies";
+import NewJobForm from "../Components/NewJobForm";
 import Header from "../Components/Header";
+import Contact from "../Components/Contact";
 import Footer from "../Components/Footer"
 
-const VacanciesPage = () =>{
+const Contact_us= () =>{
   
 
 return(
     <>
         <Header />
-        <Vacancies />
+        <Contact/>
         <Footer />
     </>
     
 )
 }
 
-export default VacanciesPage;
+export default Contact_us;
