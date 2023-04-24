@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom'
+import Header from '../Components/Header';
 
 const Vacancies = () => {
 	const [jobs, setJobs] = useState([]);
@@ -15,16 +16,16 @@ const Vacancies = () => {
 		})
 	},[]);
 
-	return (  
-		jobs.map((job) => (
+	return ( 
+			jobs.map((job) => (
+			
 			<ul>
 				<Link to={`/job/${job.id}`}>
 					<h3 key={job.id}>{job.title}</h3>
 				</Link>
 				<h5>{job.location}</h5>
 				<h5>{job.company}</h5> 
-			</ul>
-						
+			</ul>			
 		))
 	);
 };

@@ -1,18 +1,18 @@
 import React from "react";
-import NewJobForm from "../Components/NewJobForm";
+import Vacancies from "../Components/Vacancies";
 import Header from "../Components/Header";
 
-const NewJob = () =>{
+const VacanciesPage = () =>{
   
 
 return(
     <>
         <Header />
-        <NewJobForm />
+        <Vacancies />
         
     </>
     
 )
 }
 
-export default NewJob;
+export default VacanciesPage;
