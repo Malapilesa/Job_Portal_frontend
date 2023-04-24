@@ -1,42 +1,44 @@
 import React, { useState } from "react";
 
 const NewJobForm = () =>{
+    const [jobs, setJobs] = useState([]);
+    const [title, setTitle] = useState("");
+    const [location, setLocation] = useState(""); 
+    const [company, setCompany] = useState("");
+    const [description, setDescription] = useState(""); 
+    const [requirements, setRequirements] = useState("");
+    const [salary, setSalary] = useState(""); 
+    const [level, setLevel] = useState(""); 
 
-    const[title, setTitle] = useState("");
-    const[location, setLocation] = useState(""); 
-    const[company, setCompany] = useState("");
-    const[description, setDescription] = useState(""); 
-    const[requirements, setRequirements] = useState("");
-    const[salary, setSalary] = useState(""); 
-    const[level, setLevel] = useState(""); 
+    const onSubmit = (event) =>{
+        event.preventDefault();
 
-    const onSubmit= () =>{
-        useEffect(() =>{
-
-            const requestOptions = {
+            fetch('http://127.0.0.1:8000/jobs/',{
                 method : 'POST',
                 headers : {'Content-Type': 'application/json'},
                 body: JSON.stringify({
-                        title:'title',
-                        location:'location',
-                        company:'company',
-                        description:'description',
-                        requirements: 'requirements',
-                        salary : 'salary',
-                        level: 'level'
-    
+                        title: title,
+                        location: location,
+                        company: company,
+                        description: description,
+                        requirements: requirements,
+                        salary : salary,
+                        level: level
                 })
-            };
-            fetch('http://127.0.0.1:8000/job_app/Job', requestOptions)
-                .then ((res) =>res.json())
-                .then((jobs) => {
-                    setJobs(jobs)
-                    console.log(jobs.token);
-                  }
-              );   
-        
-        },[]);
-    }
+            })
+                .then ((res) => res.json())
+                .then((job) => {
+                    console.log(jobs);
+                    setJobs((jobs) =>[job, ...jobs]);
+                    setTitle('');
+                    setLocation('');
+                    setCompany('');
+                    setDescription('');
+                    setRequirements('');
+                    setSalary('');
+                    setLevel('');
+                  });
+    };
 
     return(
         <form onSubmit={onSubmit}>
